@@ -1,0 +1,35 @@
+#include <stdio.h>
+
+int main()
+{
+float res = 0.0, N;
+char sign;
+printf ("Type your expression\n");
+while (sign != 'E') {
+scanf ("%f %c", &N, &sign);
+switch (sign) {
+case 'S':
+res = N;
+break;
+case '+':
+res += N;
+break;
+case '-':
+res -= N;
+break;
+case '*':
+res *= N;
+break;
+case '/':
+if (N == 0)
+printf("Error\n");
+else
+res /= N;
+break;
+default:
+printf("Error\n");
+}
+printf("= %f\n", res);
+}
+return 0;
+}

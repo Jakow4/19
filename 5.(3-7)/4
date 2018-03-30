@@ -1,0 +1,12 @@
+#include <stdio.h>
+
+int main(void) {
+	int n;
+	int Factorial = 1;
+	printf("Factorial Numbers:\n");
+	for (n=1; n<11; n++) {
+		Factorial = Factorial*n;
+		printf("%i		%i\n", n, Factorial);
+	}
+	return 0;
+}

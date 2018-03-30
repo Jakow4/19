@@ -1,0 +1,12 @@
+#include <stdio.h>
+
+int main(void) {
+	int n;
+	int TriAngle = 0;
+	printf("Triangle Numbers:\n");
+	for (n=1; n<11; n++) {
+		TriAngle +=5;
+		printf("%i		%i\n", n, TriAngle);
+	}
+	return 0;
+}
