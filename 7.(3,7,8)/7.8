@@ -1,0 +1,64 @@
+#include <stdio.h>
+int main(void) {
+  int console;
+  float stawka;
+  float zarplata, chasy, nologi;
+  
+  printf("*********************************************************************\n");
+  printf("Введите число, соответствующее желаемой тарифной ставке или действию:\n");
+  printf("1)$8.75/ч                     2)$9.33/ч                              \n");
+  printf("3)$10.00/ч                    4)$11.20/ч                             \n");
+  printf("5)Выход                                                              \n");
+  printf("*********************************************************************\n");
+  
+  scanf("%i", &console);
+  switch(console) {
+    case 1:
+    stawka = 8.75;
+    break;
+    case 2:
+    stawka = 9.33;
+    break;
+    case 3:
+    stawka = 10.00;
+    break;
+    case 4:
+    stawka = 11.20;
+    break;
+    case 5:
+    printf("Выход");
+    return 0;
+    break;
+    default:
+    printf("Выберите число от 1 до 5\n");
+    return 0;
+    break;
+  }
+  
+  printf("Общее число часов: ");
+  scanf("%f", &chasy);
+  if (chasy > 40) {
+   zarplata = chasy*stawka + (chasy-40)*1.5 ;
+  } 
+  
+  else {
+  zarplata = chasy*stawka;   
+  }
+  if (zarplata <= 300) {
+    nologi = zarplata*0.15;
+  } 
+  
+  else if(zarplata > 300 && zarplata <=450) {
+    nologi = 45 + (zarplata-300)*0.2;
+  }
+  
+  if (zarplata > 450) {
+    nologi = 45 + 30 + (zarplata-450)*0.25;
+  } 
+  
+  zarplata = zarplata - nologi;
+  printf("Зарплата: $%g\n", zarplata);
+  printf("Налоги: $%g", nologi);
+  
+  return 0;
+}

@@ -1,0 +1,19 @@
+#include "stdio.h"
+
+int main(void) {
+  int a=1, i=0, j=0, N=0;
+  while(a != 0) {
+    scanf("%i", &a);
+    N++;
+    if(a % 2 == 0) {
+      i++;
+    }
+    else {
+      j++;
+    }
+  }
+  printf("Общее количество цифр: %i\n", N);
+  printf("Количество нечетных цифр: %i\n", j);
+  printf("Количество четных цифр: %i", i);
+  return 0;
+}
