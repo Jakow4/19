@@ -12,7 +12,7 @@ putchar('\n');
 return 0; 
 } 
 
-void bin(unsigned long a){ //Recursive function 
+void bin(unsigned long a){ 
 int g; 
 g=a%2; 
 if (a>=2) 
